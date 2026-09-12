@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      color: #333;
+    }
+    header {
+      background-color: #24292e;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a {
+      margin-left: 1rem;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><a href="{{ '/' | relative_url }}">blog.test1</a></div>
+    <nav>
+      <a href="{{ '/' | relative_url }}">HOME</a>
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
