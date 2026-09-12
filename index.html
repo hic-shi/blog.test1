@@ -1,0 +1,17 @@
+---
+layout: default
+title: ホーム
+---
+
+<h2>記事一覧</h2>
+
+<ul>
+  {% for post in site.posts %}
+    <li style="margin-bottom: 1rem;">
+      <span style="color: #777; font-size: 0.9rem;">{{ post.date | date: "%Y-%m-%d" }}</span> - 
+      <a href="{{ post.url | relative_url }}" style="font-weight: bold; color: #0366d6;">{{ post.title }}</a>
+    </li>
+  {% else %}
+    <li>まだ記事がありません。</li>
+  {% endfor %}
+</ul>

@@ -7,8 +7,10 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
     }
     header {
       background-color: #24292e;
@@ -25,23 +27,43 @@
     }
     nav a {
       margin-left: 1rem;
+      color: #ccc;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
     }
     main {
-      max-width: 1100px;
+      max-width: 800px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <div><a href="{{ '/' | relative_url }}">blog.test1</a></div>
+    <div><a href="{{ '/' | relative_url }}">{{ site.title }}</a></div>
     <nav>
       <a href="{{ '/' | relative_url }}">HOME</a>
     </nav>
   </header>
+
   <main>
     {{ content }}
   </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+  </footer>
 </body>
 </html>
