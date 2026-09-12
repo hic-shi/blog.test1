@@ -57,7 +57,15 @@
       <a href="{{ '/' | relative_url }}">HOME</a>
     </nav>
   </header>
-
+<details>
+  <!-- クリックすると専用一覧ページへジャンプするリンク -->
+  <summary><a href="{{ '/shingouki.html' | relative_url }}">信号機と相席純喫茶</a></summary>
+  <ul style="list-style: none; padding-left: 1rem;">
+    {% for post in site.categories['信号機と相席純喫茶'] %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</details>
   <main>
     {{ content }}
   </main>

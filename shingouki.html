@@ -1,0 +1,19 @@
+---
+layout: default
+title: "信号機と相席純喫茶 - 記事一覧"
+---
+
+<h2>信号機と相席純喫茶</h2>
+
+<ul>
+  {% for post in site.categories['信号機と相席純喫茶'] %}
+    <li style="margin-bottom: 0.5rem;">
+      <span style="color: #777;">{{ post.date | date: "%Y-%m-%d" }}</span> - 
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+  {% else %}
+    <li>このカテゴリーの記事はまだありません。</li>
+  {% endfor %}
+</ul>
+
+<p><a href="{{ '/' | relative_url }}">&larr; TOPへ戻る</a></p>
